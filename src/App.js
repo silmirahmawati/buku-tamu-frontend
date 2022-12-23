@@ -7,47 +7,48 @@ import { Daftar } from "./modules/daftar/Daftar";
 import { Keperluan } from "./modules/keperluan/Keperluan";
 import { Dashboard } from "./modules/admin/dashboard/Dashboard";
 import { AllHistory } from "./modules/admin/history/AllHistory";
-
+import { PrintQR } from "./modules/admin/PrintQR";
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element: <Home/>
+    path: "/",
+    element: <Home />,
   },
   {
-    path:"/history",
-    element: <History/>
+    path: "/history",
+    element: <History />,
   },
   {
-    path:"/profile",
-    element: <Profile/>
+    path: "/profile",
+    element: <Profile />,
   },
   {
-    path:"/login",
-    element: <Login/>
+    path: "/login",
+    element: <Login />,
   },
   {
-    path:"/daftar",
-    element: <Daftar/>
+    path: "/daftar",
+    element: <Daftar />,
   },
   {
-    path:"/keperluan",
-    element: <Keperluan/>
+    path: "/keperluan",
+    element: <Keperluan />,
   },
   {
-    path:"/admin/dashboard",
-    element: <Dashboard/>
+    path: "/admin/dashboard",
+    element: <Dashboard />,
   },
   {
-    path:"/admin/history",
-    element: <AllHistory/>
-  }
-])
+    path: "/admin/history",
+    element: <AllHistory />,
+  },
+  {
+    path: "/admin/token-today",
+    element: <PrintQR />,
+  },
+]);
 const App = () => {
-
-  return (
-    <RouterProvider router={router}></RouterProvider>
-  )
-}
+  return <RouterProvider router={router}></RouterProvider>;
+};
 
 export default App;
